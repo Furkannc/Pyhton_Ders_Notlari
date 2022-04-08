@@ -1,0 +1,12 @@
+import sqlite3 
+con=sqlite3.connect("kütüphane.db") 
+cursor=con.cursor()
+
+def guncelle(eski,yeni):
+    cursor.execute("update tbl_kitaplık set isim=? where isim=?",(yeni,eski))
+    con.commit()
+
+eski=input("Güncellemek istenilen ad ")
+yeni=input("Yeni deger ")
+con.close()
+print("Deger güncellendi")

@@ -1,0 +1,47 @@
+filter fonksiyonu
+reduce fonksiyonu ile aynı kullanım şeklinde
+
+filter(fonksiyon,for kurulabilen degerler)
+fonksiyon olarak sadece bool degerler alır
+true false gibi
+
+orn:
+
+filter(lambda x:x%2==0,[1,2,3,4,5,6,7,8])
+#şeklinde kullanılır obje olarak yaratılır bir degere atanması gerekir
+
+print(list(filter(lambda x:x%2==0,[1,2,3,4,5,6,7,8])))
+#şeklinde degere atanır
+out:
+2,4,6,8 
+#biz 2 ye bolumunden kalanı 0 olanları aldık sadece
+
+
+orn2:
+
+def asalmi(x):
+    i=2
+    if x==1:
+        return False
+    elif x==2:
+        return True
+    else:
+        while(i < x):
+            if x % i ==0:
+                return False
+            i+=1
+        return True
+  
+#aşagıdaki şekilde tek tek gondererekte bulabiliriz 
+print(asalmi(1))
+out: False #1 asal degil
+print(asalmi(2))
+out: true #2 asal bir sayıdır
+
+liste gondererek bulmak için;
+
+print(list(filter(asalmi,range(1,100))))
+out: [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
+asal olanarı listeler 1 den 100 e kadar olanları ekrana yazar
+
+     

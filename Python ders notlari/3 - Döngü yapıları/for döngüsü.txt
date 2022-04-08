@@ -1,0 +1,157 @@
+#in operatoru
+#in kullanarak varmı şeklinde kullanılabilir
+#"s" in "python"    out:false
+#not operatoru ile kullanılabilir not tam tersi demek
+#2 in [1,2,3,4]    out: true
+#not 2 in [1,2,3,4]    out: false
+
+
+#for dongusu
+
+#for eleman in veri(liste,demet,vs.)
+#ornek
+
+#liste=[1,2,3,4,5,6,7]
+#for eleman in liste:  //eleman yerine istediğmizi yazabiliriz ( i )
+#    print(eleman)
+#out
+1
+2
+3
+... 7
+
+veya 
+
+toplam=0
+liste=[1,2,3,4,5,6,7]
+for eleman in liste:
+    toplam +=eleman
+print(toplam)
+out
+28
+
+
+veya
+
+toplam=0
+liste=[1,2,3,4,5,6,7]
+for eleman in liste:
+    toplam +=eleman
+    print("Toplam: {} Eleman {}".format(toplam,eleman))
+
+out:
+
+Toplam: 1 Eleman 1
+Toplam: 3 Eleman 2
+Toplam: 6 Eleman 3
+Toplam: 10 Eleman 4
+Toplam: 15 Eleman 5
+Toplam: 21 Eleman 6
+Toplam: 28 Eleman 7
+
+
+listeden çift sayı bulmak için
+
+
+liste=[1,2,33,42,64,63,86,24]
+for eleman in liste:
+    if eleman % 2==0:
+        print(eleman)
+        
+out:
+2
+42
+64
+86
+24
+
+
+stringler üzerinde gezinme
+
+s="python"
+
+for i in s:
+    print(i)    //i nin yanına * - konulursa - kadar tekrar eder harfi
+out:
+p
+y
+t
+h
+o
+n
+
+demetler üzerinde gezinme
+
+demet=(1,2,3)
+for a in demet:
+    print(a)
+    
+out:
+1
+2
+3
+
+
+kısaca 
+
+
+for gezen in içinde
+print(gezen) //gezen ile içinde olan herşeyi yazar
+
+
+
+yazıyla beraber çıktı almak için
+
+
+
+liste=[(1,2),(3,4),(5,6)]
+for (a,b) in liste:  #a her zaman demet içindeki ilk b ikinci deger olur
+    print("İLK DEGER {} İKİNCİ DEGER {}".format(a,b))
+    
+    out: 
+    
+    
+    İLK DEGER 1 İKİNCİ DEGER 2
+İLK DEGER 3 İKİNCİ DEGER 4
+İLK DEGER 5 İKİNCİ DEGER 6
+
+
+sozluk uzerinde gezinmek için 
+
+
+sozluk={"bir":1,"iki":2,"üç":3}
+for abc in sozluk:
+    print(abc)
+out:
+
+bir
+iki
+üç
+
+
+
+
+sozluk={"bir":1,"iki":2,"üç":3}
+for abc in sozluk.values():
+    print(abc)    
+şeklinde de kullanılabilir sadece rakamlar yazılır
+
+
+sozluk={"bir":1,"iki":2,"üç":3}
+for a,b in sozluk.items():
+    print("Anahtar:{} Deger:{}".format(a,b))
+     
+     veya
+     
+    print("Anahtar:",a,"değer:",b)
+aynı anlama gelir
+
+
+
+şeklinde de kullanılabilir
+
+out
+Anahtar:iki Deger:2
+Anahtar:bir Deger:1
+Anahtar:üç Deger:3
+

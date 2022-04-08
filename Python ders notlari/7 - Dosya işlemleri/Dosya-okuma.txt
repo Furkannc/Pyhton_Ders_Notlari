@@ -1,0 +1,64 @@
+Dosya okuma işlemleri
+
+r kipi=ile dosya okuma işlemi yapılır
+
+file=open("bilgiler.txt","r")#şeklinde dosya okuması yapılır 
+                            #eger dizinde o dosya yoksa hata verir
+                            
+try:
+    file=open("dosya","r")#dosya olmadıgı için hata vercek
+except FileNotFoundError:
+    print("Dosya bulunamadı") #şeklinde hatamızı duzenleyebiliriz
+    
+
+dosya okuma;
+####################################################################
+for dongusu ile okuma #
+
+file=open("bilgiler","r",encoding="utf-8")
+
+for i in file:
+    print(i)
+file.close()#butun satırlar okunduktan sonra dosya okuma işlemini kapatıyoruz
+
+out;
+dosya içindeki herşey ekrana yazılır 
+#################################
+for i in file:
+    print(i , end="")#artık dosya arasına 
+                    #okurken \n karakteri koyulmaz
+file.close()
+####################################################################
+
+
+Read fonksiyonu ile okuma;#
+
+
+file=open("bilgiler","r",encoding="utf-8")
+
+icerik=file.read() #dosya içindek veriler artık 
+                   #string formatında bi objeye aktarıldo
+                   
+print(icerik) #şeklinde de ekrana yazdırılır
+#dosya eger 2 defa read komutu ile okunursa 2.defa da hicbir veri dondurmez
+####################################################################
+
+
+
+readline() fonksiyonu ile okuma;#
+
+file=open("bilgiler","r",encoding="utf-8")
+print(file.readline())#sadece tek satır okunur
+
+file.close()                  
+
+####################################################################
+readlines() fonksiyonu ile okuma;#
+
+
+file=open("bilgiler","r",encoding="utf-8")
+liste=file.readlines()
+print(liste)
+file.close()
+
+# tum satıları bir liste içine alır

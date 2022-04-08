@@ -1,0 +1,111 @@
+İnheritance (Kalıtım)
+
+#kalıtım veya miras alma 
+
+class calısan():
+    def __init__(self,isim,maas,departman):
+        print("Çalışan sınıfının init fonksiyonu")
+        self.isim=isim
+        self.maas=maas
+        self.departman=departman
+    def bilgiver(self):
+        print("Çalışan sınınfının bilgileri")
+        
+        print("""
+        isim: {}
+        maas: {}
+        departman: {}
+        """.format(self.isim,self.maas,self.departman))
+    def departmandegis(self,dep_ad):
+        self.departman=dep_ad
+   
+############################################
+kalıtım uygulamak için;
+
+class yonetici(calısan):#calısan sınıfının ozelliklerini esas alır
+    pass #egerki pass denmez ise hata alınır
+    #cunku boş bir sınıf oluşturulamaz
+    #egerki pass kullanılmazsa yeni metod eklemesi yapılması şarttır
+    
+#############################################
+yonetici1=yonetici("Furkan",5000,"Aİ") #şeklinde kalıtım yapılan sınıftan obje turetilir
+
+yonetici1.bilgiver()
+out;
+    Çalışan sınınfının bilgileri
+
+        isim: Furkan
+        maas: 5000
+        departman: Aİ
+        
+yonetici1.departmandegis("BİLİŞİM")#ŞEKLİNDE YENİ DEPATMAN ATANIR
+
+
+#######################################
+OVERRİDİNG (İPTAL ETME) 
+########################################
+egerki kalıtım yapılan class yerine kendi metodumuzu kullanmak istersek
+kalıtım yapılan metodu iptal etmeye override denir
+
+################################
+kullanımı;
+
+class yonetici(calısan):
+    def __init__(self,isim,maas,departman,kisi_sayısı):#diger classtaki __init__ fonksiyonu iptal olur bu class içinde
+        print("yonetici sınıfının init fonksiyonu")
+        self.isim=isim
+        self.maas=maas
+        self.departman=departman
+        self.kisi_sayısı=kisi_sayısı
+   
+yonetici2=yonetici("hasan",3200,"ai",5)#şeklinde yeni oluşturulan init fonksiyonunu kullanabiliriz
+   
+ 
+##############################
+kullanım2;
+class yonetici(calısan):
+    def __init__(self,isim,maas,departman,kisi_sayısı):
+        print("yonetici sınıfının init fonksiyonu")
+        self.isim=isim
+        self.maas=maas
+        self.departman=departman
+        self.kisi_sayısı=kisi_sayısı
+    def bilgiver(self):#şimdi bilgiver kısmını override edeceğiz
+        print("Çalışan sınınfının bilgileri")
+        
+        print("""
+        isim: {}
+        maas: {}
+        departman: {}
+        sorumlu kisi sayısı: {}
+        """.format(self.isim,self.maas,self.departman,self.kisi_sayısı))
+####################
+orn;     
+yonetici2=yonetici("hasan",3200,"ai",5)
+yonetici2.bilgiver()
+
+out;
+         
+ 
+        isim: hasan
+        maas: 3200
+        departman: ai
+        sorumlu kisi sayısı: 5
+       
+       
+       
+       
+       
+################################################################################################################################################################
+SUPER ANAHTAR KELİMESİ   ::override etmeden kalıtım yapılan sınfıın metodları kendi sınfımızın metodlarını kullanmayı saglar
+################################################################################################################################################################       
+Kullanımı;
+
+class yonetici(calısan):
+    def __init__(self,isim,maas,departman,kisi_sayısı):
+        super().__init__(isim,maas,departman)
+    #super diyerek kalıtım yapılan sınıfın __init__ metodunu kullanarak,(calıan) sınıfı
+    #3 tane parametremizi ordan almayı saglayıp son parametreyide kendi sınfımızdan almasını saglalıyoruz (yonetici)  sınıfı
+        self.kisi_sayısı=kisi_sayısı
+        
+   

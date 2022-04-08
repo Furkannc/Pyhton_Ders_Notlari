@@ -1,0 +1,17 @@
+import sqlite3 
+con=sqlite3.connect("kütüphane.db") 
+cursor=con.cursor()
+def tablo_olustur():
+    cursor.execute("CREATE TABLE IF NOT EXISTS kitaplık (isim TEXT,yazar TEXT,yayinevi TEXT,sayfasayisi İNT)")
+    con.commit()
+def veriekle(isim,yazar,yayinevi,sayfasayisi):
+    cursor.execute("insert into kitaplık values (?,?,?,?)",(isim,yazar,yayinevi,sayfasayisi))
+#|  ? işareti ile daha sonra veriyi vercegimizi soyluyoruz , verileri demet içine alınmış inputlardan vercegiz
+    con.commit()
+tablo_olustur()
+isim=input("Kitap ismi giriniz: ")
+yazar=input("Yazar ismi giriniz: ")
+yayinevi=input("Yayınevi adı: ")
+sayfasayisi=int(input("Sayfa sayısı: "))
+veriekle(isim,yazar,yayinevi,sayfasayisi) #fonksiyona inputlardan gelen degeri atıyoruz 
+con.close()

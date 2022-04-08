@@ -1,0 +1,39 @@
+#   Tablodaki veriler çekme   #
+
+import sqlite3 
+con=sqlite3.connect("kütüphane.db") 
+cursor=con.cursor()
+
+def verileri_al():
+    cursor.execute("select * from kitaplık")
+    liste=cursor.fetchall()
+    #imleçdeki fetchall() metodu ile  butun verileri bize verir bizde bunu listeye atıyoruz
+    #herhangi bi deger ataması olmadıgı için bizim commit() metoduna ihtiyacımız yok
+    print("Kitaplık tablosu bilgileri...")
+    for i in liste:
+        print(i)
+    #istenirse direk olarak print(liste) şeklinde kullanılabilir
+def yayinevinegore(yayinevi):
+    cursor.execute("select * from where yayinevi=?",(yayinevi))
+    liste=cursor.fetchall()
+    print("Yayınevine gore arama")
+    for i in liste:
+        print(i)
+    
+def isimegore(isim):
+    cursor.execute("select * from where yayinevi=?",(isim))
+    liste=cursor.fetchall()
+    print("İsime gore arama")
+    for i in liste:
+        print(i)
+    
+    
+def yazaragore(yazar):
+    cursor.execute("select * from where yayinevi=?",(yazar))
+    liste=cursor.fetchall()
+    print("yazaragore gore arama")
+    for i in liste:
+        print(i)
+    
+verileri_al()#fonksiyonumuzu çağırıyoruz
+con.close()

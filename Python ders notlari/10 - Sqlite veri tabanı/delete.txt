@@ -1,0 +1,12 @@
+import sqlite3 
+con=sqlite3.connect("kütüphane.db") 
+cursor=con.cursor()
+
+def guncelle(ad):
+    cursor.execute("delete from kitaplık where isim=?",(ad,))
+    con.commit()
+
+ad=input("silinmesini istediğini kitap adı: ")
+guncelle(ad)
+con.close()
+print("Veri silindi")

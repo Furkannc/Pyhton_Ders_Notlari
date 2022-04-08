@@ -1,0 +1,34 @@
+#           decorater kullanımı;            #
+import time
+
+def zaman_hesapla(func):
+    def wrapper(sayılar):
+        basla=time.time()
+    
+        sonuc=func(sayılar)
+        
+        bitis=time.time()
+        
+        print(func.__name__ + " "   + str(bitis-basla) +" Saniye sürdü")
+        return sonuc
+    return wrapper
+    
+@zaman_hesapla
+def karelerihesapla(sayılar):
+    sonuc=list()
+    
+    for i in sayılar:
+        sonuc.append(i ** 2)
+    return sonuc
+    
+@zaman_hesapla
+def kuplerihesapla(sayılar):
+    sonuc=list()
+    
+    for i in sayılar:
+        sonuc.append(i ** 3)
+    return sonuc
+
+print(
+karelerihesapla(range(100000))
+kuplerihesapla(range(100000))

@@ -1,0 +1,74 @@
+zip fonksiyonu;
+
+iki listeyi bir demete almak için:
+
+#############################################################
+uzun ve yoruucu kullanım;
+
+liste1=[1,2,3,4,5]
+liste2=[6,7,8,9,10,11]
+i=0
+sonuc=list()
+
+while i<len(liste1) and i < len(liste2):
+    sonuc.append((liste1[i],liste2[i]))
+    i+=1
+print(sonuc)
+out:    [(1, 6), (2, 7), (3, 8), (4, 9), (5, 10)]
+
+###############################################################
+zip fonksiyonu ile kullanım;
+
+print(zip(liste1,liste2))
+#obje şeklinde oluşturularak kullanılır bir degere atanması gerekir
+print(list(zip(liste1,liste2)))
+out:    [(1, 6), (2, 7), (3, 8), (4, 9), (5, 10)]
+###########################################
+orn2;
+liste1=[1,2,3,4,5]
+liste2=[6,7,8,9,10,11]
+liste3=["python","php","c#","java"]
+print(list(zip(liste1,liste2,liste3)))
+
+out:    [(1, 6, 'python'), (2, 7, 'php'), (3, 8, 'c#'), (4, 9, 'java')]
+#şeklinde de kullanılır
+
+####################################################3
+orn3;
+# for dongusu ile iki liste uzerinde gezinmek içinde kullanılır
+
+liste1=[1,2,3,4]
+liste3=["python","php","c#","java"]
+for i,j in zip(liste1,liste3):
+    print("i: ",i,"j:",j)
+    
+out:
+    i:  1 j: python
+    i:  2 j: php
+    i:  3 j: c#
+    i:  4 j: java
+   
+   
+orn4;
+
+sozluk1={"elma":1,"armut":2,"muz":3}
+sozluk2={"sıfır":0,"bir":1"iki":2}
+print(list(zip(sozluk1,sozluk2)))
+#şeklinde sadece anahtarsozlukleri listeye alır
+print(list(zip(sozluk1.values(),sozluk2.values())))
+#şeklinde de sadece degerleri listeye alır
+
+
+ornek;
+liste1=[1,2,3,4]
+liste2=["bir","iki","üç","dort"]
+liste3=["I","II","III","IX"]
+for i,j,k in zip(liste1,liste2,liste3):
+    print("sayıyla: ",i,"yazıyla: ",j,"roma rakamıyla: ",k)
+    
+out:
+    
+sayıyla:  1 yazıyla:  bir roma rakamıyla:  I
+sayıyla:  2 yazıyla:  iki roma rakamıyla:  II
+sayıyla:  3 yazıyla:  üç roma rakamıyla:  III
+sayıyla:  4 yazıyla:  dort roma rakamıyla:  IX

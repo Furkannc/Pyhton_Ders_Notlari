@@ -1,0 +1,87 @@
+Fonksiyonlar
+
+def fonksoyonad(opsiyonel parametre):#def ile gömülür..
+    foksiyon bloğu
+    veya
+    dönüş değeri
+    
+    
+orn;
+#şeklinde oluşturulur;
+def selamla():
+    print("Merhaba")
+    print("Nasılsınız")
+    
+    
+#şeklinde kullanılır;
+selamla()#istenildiği kadar istenilen yerde kullanılır
+
+orn2;
+def selamver(isim):
+    print("İsminiz: ",isim)
+
+
+kullanım:
+selamver("furkan")
+
+
+out:
+isminiz furkan
+
+orn3;
+
+def topla(a,b,c):
+    print("Toplamları: ",a+b+c)
+    
+kullanım:
+topla(2,3,5)
+
+out:
+#toplamları: 10
+
+
+
+FONKSİYONDA RETURN;
+#Fonksiyonda return yoksa tipi nonetype dır sadece ekrana yazar,
+#diğer komutlar ile kullanmak için return değeri şarttır.
+#return eğer diğer komutlardan once geliorsa diğer komutlar çalışmaz
+#return foksiyonu sonlandırır
+kullanım;
+
+def toplama(a,b,c,):
+    return a+b+c
+kullanım2;
+def ikiilecarp(a):
+    return a*2
+
+beraber kullanımı
+
+toplam=toplama(3,4,5)#ilk toplama deger atanır
+print(ikiilecarp(toplam))#toplamdan gelen degeri ikiyle çarp metoduna ekliyoruz
+
+out;
+24
+
+ornek;
+
+def üçleçarp(a):
+    print("1.fonksoyon çalıştı")
+    return a*3
+
+def ikiylebol(a):
+    print("2.fonksoyon çalıştı")
+    return a/2
+    
+def dordebol(a):
+    print("3.fonksoyon çalıştı")
+    return a/4
+#fonksoyonlar eklendi
+#kullanımı;
+print(dordebol(ikiylebol(üçleçarp(30))))
+
+out;
+1.fonksoyon çalıştı
+2.fonksoyon çalıştı
+3.fonksoyon çalıştı
+11.25
+

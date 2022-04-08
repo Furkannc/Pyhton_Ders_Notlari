@@ -1,0 +1,65 @@
+# datetime modulu#
+
+from datetime import datetime #şeklinde impor edilit
+
+from datetime import datetime as dt # şeklinde de kullanılabilir
+
+print(datetime.now()) #şimdiki zamanı verir
+
+şuan=datetime.now()
+şuan.datetime.year<mont<hour #şeklinde de yıl ,ay ve saat alınabilir
+
+print(şuan)
+# out: 2021-09-23 18:51:33.539980
+
+##################################
+strftime kullanımı
+
+from  datetime import datetime
+
+şuan=datetime.now()
+
+print(datetime.strftime(şuan,"%y")) #şeklinde
+
+out: 21
+
+print(datetime.strftime(şuan,"%b")) #ay ismi
+print(datetime.strftime(şuan,"%a")) #gun ismi
+print(datetime.strftime(şuan,"%x")) #saat blgisi
+print(datetime.strftime(şuan,"%g")) #gun bilgisi
+
+################################
+Türkçe veri almak istenirse
+
+import locale
+
+locale.setlocale(locale.LC_ALL  ,"")
+#ŞEKLİNDE İMPORT EDİLMESİ YETERLİ OLUR
+####################
+from datetime import datetime
+
+şuan =datetime.now()
+print(datetime.timestamp(şuan))
+
+out<: 1632424232.272544 #tarihi saniye cinsinden verir
+
+###############################
+
+from datetime import datetime
+
+şuan =datetime.now()
+
+şuan2= datetime.timestamp(şuan)
+print(datetime.frontinestamp(şuan2))
+
+out<:   2021-09-23 19:13:12.354964  #saniyeyi tarihe çevirir
+
+###############################
+from datetime import datetime
+
+şuan =datetime.now()
+dogun=datetime(2002,12,17)#tarih atamaı yapılabilir
+print(şuan-dogun)
+
+out<: 6855 days, 19:19:43.515503
+#şeklinde kullanılabilir

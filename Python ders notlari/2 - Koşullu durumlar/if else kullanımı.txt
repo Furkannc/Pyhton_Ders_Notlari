@@ -1,0 +1,10 @@
+#if( koşul ): şeklinde kullanılır
+    #burdan devam edilir if li kod için
+    
+#elif koşul:  şeklinde kullanılır
+    #burdan devam edilir
+
+#else:     kullanımı bu şekildedir
+    #burdan devam edilir
+#koşul her zaman if ile başlar
+#parantez içindede kullanılabilir

@@ -1,0 +1,26 @@
+map fonksiyonu;
+
+map(fonksiyon,for dongusu ile geilebilcek degerler alıt(liste,demetvb))
+istenildigi kadar liste veya degerler ile kullanılabikir
+örn:
+
+def double(x):
+    return x*2
+    
+map(double,[1,2,3,4])#şeklinde fonksiyonu kullanarak ikiye çarpıyoruz listemizi
+
+#bunu kullanabilmek için bir degere atamamız gerekyor
+print(list(map(double,[1,2,3,4])))
+out: [2,4,6,8]
+********************************************************
+lambda fonksiyonu ile kullanabilir;
+
+print(list(map(lambda x : x*2,(1,2,3,4,5))))
+out: [2,4,6,8,10]
+*************************************************
+ls=[1,2,3,4,5,6,7,8,9]
+ls2=[2,312,5432,123,342,123]
+print(list(map(lambda x,y : x*y,ls,ls2)))
+#x =ls ,y=ls2 oluyor daha sonra her dongude birbiri ile çarpıyoruz
+#şeklinde de kullanabilir 
+out:[2, 624, 16296, 492, 1710, 738]

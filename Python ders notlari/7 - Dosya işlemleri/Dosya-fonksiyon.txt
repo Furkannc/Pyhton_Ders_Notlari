@@ -1,0 +1,46 @@
+Dosyalarda kullanılan fonksiyonlar
+
+Dosya otomatik kapatma ;#
+
+with open(dosya_ad,dosya_kip) as file:#şeklinde oluşturlur
+    #dosya işlemlerimiz bittiginde otomatik olarak kapatılır
+    dosya...
+
+
+orn;
+
+with open("bilgiler.txt","r",encoding="utf-8) as file:
+    for i in file:
+        print(i)
+#şeklinde kullanabiliriz
+
+################################################
+Dosyaları ileri geri sarmak;
+
+with open("bilgiler.txt","r",encoding="utf-8) as file:
+    print(file.tell())
+#şeklinde dosya içinde imlecin nerde olgunu bize soyler
+
+out: 0     #dosya okuma işlemleri dosyanın en başından başlar
+
+#############################################################
+
+with open("bilgiler.txt","r",encoding="utf-8) as file:
+    print(file.tell())
+    file.seek(20)
+    print(file.tell())
+    
+out; 20 #seek metodu ile dosyanın 20. baytlık konumuna gittik
+#1 bayt = 1 karakter        yani 20.karaktere gitmiş bulunmaktayız
+
+
+#########################################################3
+
+with open("bilgiler.txt","r",encoding="utf-8) as file:
+    file.seek(5)#dosyanın 5.karakterine gider
+    icerik=file.read(10)#10 karakterlik alanı alıp
+   #eger read metoduna deger verirsek o deger kadar karakter okur
+    print(icerik)#aldgımız alanı yazıyoruz
+ 
+out:    dosyanın 5. karakterinden itibaren 10 karakterlik alan
+

@@ -1,0 +1,70 @@
+Hata yakalam - try,except,finally
+
+ orn;
+ 
+ try:
+    a=int("uasdh812")#hatayı yakaladıgı noktada except bloguna gider
+                     #alt satırı okumaz
+    print("prog burda")
+except:   #eger bir hata olayı verilmezse butun hatalar burdan devam edilir
+    print("bir hata oluştu")
+finally:#mutlaka çalışması gereken kodlardır
+print("prog bitti")
+
+
+#hata degeri verme
+
+ try:
+    a=int("uasdh812")
+    print("prog burda")
+except ValueError:  #şeklinde hata sebebi verilir
+                #verilen hata olşutgu durumda devam edilir
+    print("bir hata oluştu")
+print("prog bitti")
+
+
+
+orn;
+
+try:
+    a=int(input("sayı1"))
+    b=int(input("sayı2"))
+    print(a/b)
+except ValueError:#except (ValueError,ZeroDivisionError): 
+                  #şeklinde de kullanılabilir iki komut hatası tek satırda birleşebilir
+    print("İnput'u kontrol ediniz")
+except ZeroDivisionError:
+    print("Bir sayı 0 a bölnmez")
+finally:#hata olsa da olmasa
+        #çalışacak satır 
+    print("Komut satırları sona erdi)
+print("last line")
+    
+    
+    
+    
+    Hata fırlatmak;
+   
+raise hatadı(opsiyone hata mesajı)
+
+
+
+orn;
+
+def terscevir(s):
+    if(type(s) != str):
+        raise ValueError("Lütfen string bir deger gonderin")
+    else:
+        return s[::-1]
+#artık valu error hatamızı ozelleştirmiş olduk
+
+
+try:
+    print(terscevir(12))
+except ValueError:
+    print("Fonksiyon hata verdi")
+    
+#şeklinde try kalıbında kullabanilirzyp
+        
+        
+        

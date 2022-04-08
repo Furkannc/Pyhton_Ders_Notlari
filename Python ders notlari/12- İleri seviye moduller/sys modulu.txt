@@ -1,0 +1,9 @@
+#sys modulu
+
+import sys #şeklinde eklenir
+
+sys.exit() #derleyiciyi bulundugu yerde durdurur
+
+sys.stderr.write("bu bir hata mesajı") #istenilen hata mesajını oluşturur
+sys.stderr.flush() #hata mesajını yazdırır
+

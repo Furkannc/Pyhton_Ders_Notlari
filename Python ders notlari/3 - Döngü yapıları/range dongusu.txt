@@ -1,0 +1,48 @@
+range() fonksiyonu
+
+range(başlangıc,bitiş,artırma) degeri verilir artırma degeri şart degildir
+
+print(*range(0,20)) şeklinde kullanılır
+1 2 ... 19
+print(*range(20,0,-1)) şeklinde kullanılrı geri gidilmek istenirse
+20,19,18....1
+
+
+
+for dongusu ile kullanma
+
+for i in range(1,101):
+    print(i)
+out:
+1
+2
+3....
+100
+
+
+string ile for
+
+for i in range(1,10):
+    print("*" * i)
+for s in range(9,0,-1):
+    print("*"*s)
+ 
+şeklinde de kullanılabilir 
+*
+**
+***
+****
+*****
+******
+*******
+********
+*********
+*********
+********
+*******
+******
+*****
+****
+***
+**
+*

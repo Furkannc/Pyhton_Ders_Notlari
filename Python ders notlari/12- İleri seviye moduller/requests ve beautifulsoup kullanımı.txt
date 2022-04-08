@@ -1,0 +1,56 @@
+cmd>>>>>>>>
+pip3 install requests
+pip3 install BeautifulSoup4 
+#şeklinde kurulması gerekiyor
+
+#####################################
+import requests
+
+from bs4 import BeautifulSoup
+
+url=""
+
+response= requests.get(url)#sayfayı requests metodu ile respons değişkenimize yukluyoruz
+
+icerik=response.content#sayfa içeriğini objeye atıyoruz
+
+soup=BeautifulSoup(icerik,"html.parser")#soup değişkenine beautifulsoup metodunu kullanarak
+                                        #once içeriği daha sonra html ayrıştırcı yardımı ile ayrıştırıyoruz
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+print(soup.prettify())#prettify metodunu kullanarak sayfanın html içeriğini ekrana yazabilriiz
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+print(soup.find_all("a"))#a etiketine sahip html kodlarını ekrana yazabiliriz
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+for i in soup.find_all("a"):
+    print(i)
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+for i in soup.find_all("a"):
+    print(i.get("href"))
+    print("*****************************")
+    #a href etiketine sahip olan linkler ekrana yazdırılır
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+for i in soup.find_all("a"):
+    print(i.text)
+    print("*****************************")
+    #a etiketine sahip yazılar alınır
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+print(soup.find_all("div",{"class":"content"}))
+#class ismi content olan div etiketlerini yazdırır sadece
+
+#################################################
+#İmdb top 250 veri çeker
+
+import requests
+
+from bs4 import BeautifulSoup
+
+url="https://www.imdb.com/chart/top/?ref_=nv_mv_250"
+
+response=requests.get(url)
+
+icerik=response.content
+
+soup=BeautifulSoup(icerik,"html.parser")
+for i in soup.find_all("td",{"class":"titleColumn"}):
+    print(i.text)
+    print("**********************************************")

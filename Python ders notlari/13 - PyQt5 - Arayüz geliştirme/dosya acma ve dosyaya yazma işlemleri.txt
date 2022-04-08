@@ -1,0 +1,11 @@
+    def sil(self):##################
+        self.yazialan.clear()
+
+    def dosyaac(self):#######################
+        dosyaad=QFileDialog.getOpenFileName(self,"Dosya ac",os.getenv("Desktop"))
+        with open(dosyaad[0],"r") as file:
+            self.yazialan.setText(file.read())
+    def dosyakaydet(self):#######################
+        dosyaad = QFileDialog.getSaveFileName(self, "Dosya kaydet", os.getenv("Desktop"))
+        with open(dosyaad[0], "w") as file:
+            file.write(self.yazialan.toPlainText())

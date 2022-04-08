@@ -1,0 +1,29 @@
+reduce(fonksiyon,for dongusu kurulabilen obje)
+listenin önce ilk 2 elemanına uuygular ve degeri 3. elemana uygular
+
+orn:
+from functools import reduce#şeklinde imğport etmemiz gerekli
+
+def toplam(x,y):
+    return x+y
+    
+liste=[12,18,20,10]
+
+print(reduce(topla,liste)#şeklinde kullanılır
+#12+18=30+20=50+10=6
+out: 60 #şeklinde kullanımı vardır
+orn 2:
+print(reduce(lambda x,y:x+y,liste))
+#şeklinde lambda fonksiyonu ile de kullanılabilir
+
+orn3:
+def maximum(x,y):
+    if x>y:
+        return x
+    else:
+        return y
+
+print(reduce(maximum,[1,64,71,-1,53,12]))
+
+out:    71
+     

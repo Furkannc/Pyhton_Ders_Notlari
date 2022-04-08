@@ -1,0 +1,10 @@
+import sqlite3 
+con=sqlite3.connect("database") 
+cursor=con.cursor()
+
+def guncelle(deger,deger):
+    cursor.execute("sorgu",demet(deger,))
+    
+
+    cursor.fetchall()//sorgu döndurmesi için select * vs.
+    con.commit()//deger guncelleme silme ekleme için

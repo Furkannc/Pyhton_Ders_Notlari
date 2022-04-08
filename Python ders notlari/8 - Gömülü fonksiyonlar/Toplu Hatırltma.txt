@@ -1,0 +1,54 @@
+Toplu Hatırlatma;
+
+# Map fonksiyonu
+
+
+def double(x):
+    return x*2
+    
+map(double,[1,2,3,4])#şeklinde fonksiyonu kullanarak ikiye çarpıyoruz listemizi
+#
+print(list(map(lambda x : x*2,(1,2,3,4,5))))    
+
+# Reduce fonksiyonu
+
+def toplam(x,y):
+    return x+y
+    
+liste=[12,18,20,10]
+
+print(reduce(topla,liste)#şeklinde kullanılır
+#12+18=30+20=50+10=6
+
+# Zip fonksiyonu
+
+liste1=[1,2,3,4,5]
+liste2=[6,7,8,9,10,11]
+print(list(zip(liste1,liste2)))
+out:    [(1, 6), (2, 7), (3, 8), (4, 9), (5, 10)]
+
+# Filter fonksiyonu
+
+sadece bool degerler ile kullanılır
+print(list(filter(lambda x:x%2==0,[1,2,3,4,5,6,7,8])))
+
+
+# Enumarate fonksiyonu
+liste=["elma","armut","muz","kiraz"]
+print(list(enumarate(liste)))
+out:    [(0, 'elma'), (1, 'armut'), (2, 'muz'), (3, 'kiraz')]
+
+# All ve Any fonksiyonu 
+
+
+all=butun degerler true ise true ,
+    en az bir deger false ise false doner
+any= herhangi bi deger true ise true
+    butun degerler false ise false doner
+
+  
+all(True,True,True)
+out: True
+any(True,False,False)
+out: True
+

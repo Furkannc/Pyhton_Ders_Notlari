@@ -1,0 +1,5 @@
+obje nedir;
+
+ornk: liste demet vs uygulama içindeki herşey objedir
+obje içindeki ozellikler de metoduddur
+orn: list.append() = obje.metod 

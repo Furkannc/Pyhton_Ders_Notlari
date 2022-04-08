@@ -1,0 +1,73 @@
+##############  Metodlar  ############
+
+metod kullanımı sınıf ile;
+
+class yazılımcı():
+    def __init__(self,isim,soyisim,numara,maas,diller):
+        self.isim=isim
+        self.soyisim=soyisim
+        self.numara=numara
+        self.maas=maas
+        self.diller=diller
+    def bilgiver(self):#self diyerek objenin özelliklerinin nerdden alacagını belirtiyoruz
+        print("""
+        isim: {}
+        soyisim: {}
+        numara: {}
+        maas: {}
+        diller: {}
+        """.format(self.isim,self.soyisim,self.numara,self.maas,self.diller))#formatlama işlemi bu şekilde yapılmalı
+                #oluşan objenin alacagı değerleri self diyeek belirtiyoruz
+    def zam_yap(self,zam):
+        self.maas +=zam
+    
+    def dil_ekle(self,yenidil):#eğerki metoda bir veri girişi olcaksa o veriyi de metodun  parametre kısmına yazmalıyız
+        self.diller.append(yenidil)
+        
+        
+    #istebildiği kadar metod eklemesi yapılabilir
+        
+##############################################################3     
+obje yaratma;
+
+    yazılımcı1=yazılımcı("furkan","cosgun",12345,4000,["c","python"])#şeklinde liste şeklindede yazabiliriz
+
+###############################################################3
+oluşturulan objenin sınıfı içindeki metodunu kullanma;
+
+yazılımcı1.bilgiver()
+
+out;
+isim:   furkan
+        soyisim: cosgun
+        numara: 12345
+        maas: 4000
+        diller: ['c', 'python']
+ 
+#####################################################################
+başka bir metod kullanma;
+
+yazılımcı1.dil_ekle("java") #şeklinde yeni değer verebiliriz
+yazılımcı1.bilgiver()
+out;
+
+        isim: furkan
+        soyisim: cosgun
+        numara: 12345
+        maas: 4000
+        diller: ['c', 'python', 'Java']
+        
+#######################################################################
+başka bir metod ;
+
+yazılımcı1.zam_yap(500) #buraya zam miktarı giriyoruz
+yazılımcı1.bilgiver() #tekrardan bilgilerimiz yazdırıyoruz
+
+
+        isim: furkan
+        soyisim: cosgun
+        numara: 12345
+        maas: 4500
+        diller: ['c', 'python', 'Java']
+#verilerimizin işlendiğini görüyoruz
+

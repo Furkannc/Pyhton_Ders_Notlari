@@ -1,0 +1,9 @@
+ileri seviye sayılar
+
+abs(sayı) mutlak degerini alır
+round(sayı) alta veya üste yuvarlama yapar 0.5 ve altı 0' 0.6 ve uzeri 1 e
+max(s1,s2...) en buyuk degeri bize verir
+min(s1,s2..) en kucuk degeri verir
+#her degeri alır liste demet vs.
+sum(liste veya demet) içindeki degerleri toplar
+pow(taban,üs) üs degerini verir bize  | taban**üs |  ile aynı şeydir

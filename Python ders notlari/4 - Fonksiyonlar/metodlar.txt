@@ -1,0 +1,6 @@
+Metodlar
+
+obje.herhangibirmetod(deger(opsiyonel))
+
+a=[1,2,3]
+help(a.append)#help metodu ile ne işe yaradığını bize soyler

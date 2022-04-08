@@ -1,0 +1,28 @@
+# sqlite veritabanı # 
+
+# veritabanı oluşturma;
+
+import sqlite3 #şeklinde veritabanı modulu eklenir
+
+con=sqlite3.connect("kütüphane.db") #şeklinde baglantı metodu ile veritabanı oluşturulur
+#eger oyle bir veritabanı varsa baglanır yok ise oluşturulur
+
+cursor=con.cursor()#veritabanı uzerinde işlem yapmak için bir imleçe ihtiyaç var
+                   #istenilen isimde imleç oluşturulabilir
+                   
+con.close() #şeklinde baglantı sonlandırılır
+
+# Tablo oluşturma;
+
+import sqlite3 
+con=sqlite3.connect("kütühane.db") 
+cursor=con.cursor()
+def tablo_olustur():
+    cursor.execute("CREATE TABLE kitaplık (isim TEXT,yazar TEXT,yayinevi TEXT,sayfasayisi İNT)")
+        #execute("")     sorgu yazılır
+    con.commit()
+    #baglantı sınıfının commit() metodu ile de sorgu çalıştırılır
+
+
+tablo_olustur() #şeklinde de fonkisyonu kullanıyoruz
+con.close()

@@ -1,0 +1,44 @@
+# Modul kullanımu #
+
+#modul ekleme 1
+
+import modul_adi #şeklinde modul yuklenebilir
+dir(math) #şeklinde modul özelliklerini gorebiliriz
+help(math) #özelliklerini nasıl kullanıcağımızı gorebiliriz
+
+kullanmak için
+modul_adi.özellik(deger)
+
+orn:
+import math
+math.factorial(5)
+out:120
+
+#modul ismini kendımıze gore ayarlama
+
+import math as matematik
+orn:
+matematik.factorial(5)
+out: 120
+
+#modul ekleme 2
+
+from math import *  #butun modul ozelliklerini ekler
+ornk kullanım:
+factorial(5)
+out: 120
+
+#istenilen modulden istenilen özelligi alma
+* ile hepsini ekleyebiliriz 
+
+from modul_adi import istenilen_özellik
+
+orn:
+
+from math import floor,ceil
+
+#aynı ad da iki fonksiyon varsa son eklenen fonksiyon çalışır
+
+
+
+

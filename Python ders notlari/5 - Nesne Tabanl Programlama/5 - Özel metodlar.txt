@@ -1,0 +1,25 @@
+Özel metodlar
+
+Varsayılan olarak tanımlanan 
+ama biz çağırmayınca çalışmayan metodlardır
+
+kullanım;
+
+class kitap():
+    def __init__(self,isim,yazar,sayfasay,tur)#yeni obje yaratılırken kullanılır
+        print("Kitap objesi yaratıldı")
+        self.isim=isim
+        self.yazar=yazar
+        self.sayfasay=sayfasay
+        self.tur=tur
+    def __str__(self):#print metodunun verisi
+        #return kullanmamız lazım
+        return "isim: {} yazar: {} sayfasay: {} tur: {}".format(self.isim,self.yazar,self.sayfasay,self.tur)
+    def __len__(self):#len metodunun verisi
+        return self.sayfasay
+    def __del__#del metodunu override etmez del metodundan daha sonra kullanılır
+        print("Obje silindi")
+        
+        
+        
+        

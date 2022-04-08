@@ -1,0 +1,23 @@
+iler seviye karakter dizileri
+
+"string".upper() #stringi buyuk harfe cevirir
+"string".lower() #stringi kucuk harfe cevirir
+"kondu".replace("kon","son")#girilen iki strinigin yerlerini değiştirir
+# out: sondu
+"string".replace("değişen","değiştirilen")
+"string".startswith("x")#x değeri ile  başlamıyorsa false döner
+"string".endswith("x")#x ile bitiyorsa true doner
+"string".split(" ")# boşluklardan degeri ayırır
+"string".strip("x")# stringin başında ve sonunda bulunan x degerlerini siler
+"string".lstrip("x")# stringin sadece başında bulunan x degerlerini siler
+"string".lstrip("x")# stringin sadece sonunda bulunan x degerlerini siler
+"string".count("x")#stringin içindeki x degerinin kac defa gectigini sayar
+"string".count("x",index)#indexten itibaren stringin içindeki x degerinin kac defa gectigini sayar
+"string".find("x")#x in kaçıncı indexte oldgunu verir    
+"string".rfind("x")#sondan başlar x in kaçıncı index te oldugunu verir
+ #eger find metodunda deger bulunmazsa -1 degerini verir
+
+liste;
+
+liste=[]
+"".join(liste)#listenin elemanlarını bir string degeriyle birleştirir

@@ -1,0 +1,50 @@
+*args ve **kwargslar:
+
+#       args        #
+def fonk(*args):#args veya istenilen isim verilebilir *x
+    for i in args:#*x
+        print(i)
+        #şeklinde yaparsak bu fonksiyona istenildiği
+        #kadar arguman gonderibelirir
+        
+print(fonk(1,2,3))
+1
+2
+3
+#demet şeklinde çıktı verir
+#sadece *args şeklinde olanlar istenildiği kadar arguman alabilir
+
+-----------------------------------------------------------------------------------
+
+#       kwargs       #
+
+
+def fonk(**kwargs):#kwargs yazımı zorunlu değildir istenilen isim verilebilir
+#şeklinde tanımlarsak sözlük tipinde değer dödürür
+    print(kwargs)
+        
+fonk(bir="1",iki="2",üç="3")
+
+out:
+{'bir': '1', 'iki': '2', 'üç': '3'}
+-----------------------------------------------------------------------------------
+for i,j in fonk.items():
+    print(i,j)
+    #şeklinde sözlük içinde for döngüüsü kurulur
+
+
+-----------------------------------------------------------------------------------
+#    iç içe fonksiyon kurma    #
+
+def topla(*args):
+    def hesapla(args):
+        top=0
+        for i in args:
+            top+=i
+        return top
+    print(hesapla(args))
+    
+    
+topla(1,2,3,4,5,6,7)
+
+out:    28

@@ -1,0 +1,31 @@
+Dosya açmak
+
+open(dosya_adi,dosya_erişme_kipi)
+
+w dosya kipi =dizinde olmayan dosyayı olşuturur 
+                eger dosya varsa siler tekrar oluşturur
+/////.close()  #şeklinde kapatmamız gerekir
+               
+               
+open("bilgiler.txt","w") #şeklinde dosya oluşturulur
+
+file=open("bilgiler.txt","w") #şeklinde kullanılır
+
+file=open("dosyayolu/txt","w") #şekinde istenilen konumda oluşturulabilir
+
+file.write("kelime veya metin") #şeklinde dosyaya yazma işlemi yapılır
+                                #türkce karakter girilirse hata verir
+                              
+file=open("bilgiler.txt","w",encoding ="utf-8")
+#şeklinde yazarsak türkce karakter kullanımına izin veririz
+
+####################################################################
+
+a kipi=#append dosya eger yoksa oluşturulur 
+    #var ise dosya silinmez dosya sonuna ekleme yapar
+    
+file = open("bilgiler.txt","a",encoding="utf-8")
+
+file.write("furkan coşgun")
+
+file.close()

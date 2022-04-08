@@ -1,0 +1,87 @@
+ileri seviye listeler
+
+liste=[1,2,3,4,5]
+
+###############################################3
+append()                metodu
+liste.append("pyhton")
+print(liste)
+[1,2,3,4,5,'pyhton']
+#########################################################
+listeye başka listenin elemanlarını ekleme
+extend()            metodu
+
+liste=[1,2,3,4,5]
+liste2=[12,13,14]
+liste.extend(liste2)
+print(liste)
+out;        
+        [1,2,3,4,5,12,13,14]
+######################################################
+herhangi bi index e eleman ekleme
+insert()            metodu
+
+liste=[1,2,3,4,5]
+liste.insert(2,"python")
+#2. indexe pythonon ekler
+out;
+    [1,2,python,3,4,5]
+############################################################3
+listenin son elemanını çıkarma ve indexe gore çıkarma
+liste=[1,2,3,4,5]
+liste.pop()
+#boş gonderirsek son degeri siler
+liste.pop(3)
+#3. indexi çıkarır
+########################################################
+stringe gore çıkarma    remove()
+
+liste=["php","java","c#"]
+liste.remove("java")
+#eger listede varsa siler yoksa hata döndürür
+#############################################################
+deger ile indexini bulma
+
+liste=[1,2,3,4,5]
+liste.index(3)
+#listedeki 3 numaralı elemanın indexini verir
+#eger birden fazla deger varsa 0 a en yakın degeri verir
+liste.index(3,8)
+#8. indexten başlayaarak 3 numaralı elemanı arar
+########################################################3
+listede istenen elemandan kaç tane oldgunu bulma
+coun() metodu
+
+liste=[12,3123,21,313,123,1,31,131,232,131,1]
+liste.count(1)
+
+out;        2    #1 numaralı eleman listede 2 defa geçmiş
+########################################################
+listenin elemanlarını sayı ise büyükten küçüğe
+string ise alfabetik sıraya gore listeleme
+sort() metodu
+
+# vowels list
+vowels = ['e', 'a', 'u', 'o', 'i']
+
+# sort the vowels
+vowels.sort()
+
+# print vowels
+print('Sorted list:', vowels)
+
+out;    Sorted list: ['a', 'e', 'i', 'o', 'u']
+
+### tersten sıralamak için ####
+sort(reverse=True) #yazmak yeterldiir
+
+# vowels list
+vowels = ['e', 'a', 'u', 'o', 'i']
+
+# sort the vowels
+vowels.sort(reverse=True)
+
+# print vowels
+print('Sorted list (in Descending):', vowels)
+
+out;# Sorted list (in Descending): ['u', 'o', 'i', 'e', 'a']

@@ -1,0 +1,75 @@
+# Fonksiyonlarda Parametre Turleri
+
+
+normal kullanım;
+def selamla(isim):
+    print("Selam: ",isim)
+   
+
+
+
+   
+varsayıla deger atama;
+# içine değer verilmezse isimsiz olarak yazar
+# değer verilirse o degere gore yazar
+def selamla(isim="isimsiz")
+    print("Selam :",isim)
+
+ornek2;    
+
+def selamla(isim="isimsiz",soyad="Soyad yok")
+    print("Selam :",isim,"soyad: ",soyad)
+
+ornek3:
+
+
+def selamla(isim="isimsiz",soyad="Soyad yok")
+    print("Selam :",isim,"soyad: ",soyad)
+
+#normalde kullanım sıralı olur ama biz istenilen degeri vermek istersek;
+selamla(soyad="csgn")
+out;
+selam: isimsiz soyad: csgn
+
+
+
+ESNEK SAYIDA DEĞERLER;
+
+#normal kullanım
+def topla(a,b,c)
+    print(a+b+c)
+#eğerki biz bu fonksiyona 4 deger verirsek fonksiyon hata verir bize
+
+
+esnek sayıda deger kullanımı;
+
+def topla(*a):
+    print(a)
+    
+kullanım;
+
+topla(istenildigi kadar deger)verilebilir
+out;
+degerler tupple şeklinde(demet) şeklinde tutulur
+
+tam kullanım ve ornek;;;;;;
+
+OLUŞTURMA;
+
+def topla(*a):
+    top=0
+    for i in a:
+        top+=i
+    print(top)
+
+KULLANIM;
+
+topla(1,2,3)
+
+out:    6
+       
+    
+
+    
+    
+    

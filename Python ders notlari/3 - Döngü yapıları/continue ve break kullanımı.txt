@@ -1,0 +1,79 @@
+break ifadesi: döngu herhangi bir yer veya bi zamanda gorulurse anında komut durur
+sadece o komutun içindeki döngü durur
+if(i==0): #şeklinde kullanılır
+        break
+
+
+i=0
+orn:
+while(i<10):
+    print("i",i)
+    i+=1
+out
+1'den ona kadar dongu her satıra bir i yazar
+
+break ile kullanım
+while(i<10):
+    if(i==5):
+        break
+    print("i",i)
+    i+=1
+out:i 5 e kadar yazar ve durur
+
+ornek:
+
+while True:
+    isim=input("isminiz: / (çıkmak için w'e bas)")
+    print("girilen: ",isim)
+    if isim=="w":
+        print("çıkılıyor...")
+        break
+        
+
+
+
+continue:  dongu herhangi bir yerde gorulurse dongunun başına gider
+ve çıkan değeri kullanmaz o ifadeyi atlar
+
+orn:
+
+liste=list(range(11))
+for i in liste:
+    if i==3 or i==5: #i 3 ve 5 oldugunda
+        continue #o degerleri atlıyor
+    print("i:",i)
+
+out:
+i: 0
+i: 1
+i: 2
+i: 4
+i: 6
+i: 7
+i: 8
+i: 9
+i: 10
+
+
+
+while ile continue kullanımı 
+
+i=0
+while i<10:
+    
+    if i==2 or i==8:
+        i+=1 #if komutunun içinde de artırılması şarttır aksi takdirde dongu sonsuza girer
+        continue
+        
+    print("i:",i)
+    i+=1
+out:
+
+i: 0
+i: 1
+i: 3
+i: 4
+i: 5
+i: 6
+i: 7
+i: 9

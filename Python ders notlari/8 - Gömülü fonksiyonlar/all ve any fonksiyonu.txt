@@ -1,0 +1,45 @@
+all ve any fonksiyonları
+
+uzun yol ;
+
+def hepsi(liste):
+    for i in liste:
+        if not i :#eger i ye gelen degerde false varsa false doner kodun devamını okumaz
+            return False
+    return True
+    
+liste=[True,False,True,False,True]
+
+print(hepsi(liste))
+out : false 
+###################################################
+liste=[1,2,3,4] # sadece 0 rakamı false 'tur geriye kalan sayılar true degerdedir
+
+hepsi(liste)
+out: true
+
+def herhangi(x):
+    for i in x:
+        if i :#eger i ye gelen degerde true deger varsa true doner kodun gerisine bakmaz
+            return True
+    return False
+  ############################################  
+print(herhangi([True,False,True,False,True]))
+out; True
+################################################
+print(herhangi([0,0,0,0,0,0]))
+out; False
+#££££££££££££££££££££££££££££££££££££££££££££££££££££££££££££#
+all ve any fonksiyonu;
+
+all=butun degerler true ise true ,
+    en az bir deger false ise false doner
+any= herhangi bi deger true ise true
+    butun degerler false ise false doner
+
+  
+all(True,True,True)
+out: True
+any(True,False,False)
+out: True
+

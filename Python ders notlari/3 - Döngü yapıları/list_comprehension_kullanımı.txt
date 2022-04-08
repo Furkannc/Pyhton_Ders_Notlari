@@ -1,0 +1,63 @@
+list comprenhension: liste oluşturmak ve uretmek için kullanılır
+
+bir listeden başka bir liste oluşturmak
+for dongusu ile;
+
+liste1=[1,2,3,4,5]
+liste2=list()
+for i in liste1:
+    liste2.append(i)
+    print(liste2)
+şeklinde 1 den 2 ye kopyalanır
+
+
+list comprenhension kullanımı
+
+liste3=[1,2,3,4,5]
+liste4=[i for i in liste3] #şeklinde kolayca yapılabilir
+print(liste4)
+
+çarpma yontemi ile;
+
+liste3=[1,2,3,4,5]
+liste4=[i*5 for i in liste3] #şeklinde kolayca yapılabilir
+print(liste4)
+
+demetler ile ;
+
+demet=[(1,2),(3,4),(5,6)]
+liste5=[k*j for k,j in demet]#şeklide yapılır
+print(liste5)
+out:[2, 12, 30]
+
+stringler ile;
+
+s="furkan"
+liste6=[i*3 for i in s]#i 3 ile çarpılır s den i ye gelen deger listeye aktarılır
+print(liste6)
+
+out: ['fff', 'uuu', 'rrr', 'kkk', 'aaa', 'nnn']
+
+
+iç içe listede dongu kurma;
+
+liste8=list()
+liste7=[[1,2,3],[4,5,6,7,8],[9,10]]
+for i in liste7:#önce ilk listede gezinir
+    for x in i: #daha sonra listenin içindeki listede gezinir
+        liste8.append(x)#içteki listeden gelen degeri liste8 e ekler
+print(liste8)
+
+out:[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+
+list comprenhension kullanarak iç içe listeden veri alma
+
+
+liste9=[[1,2,3],[4,5,6,7,8],[9,10]]
+liste10=[x for i in liste9 for x in i]
+#x e yaz: liste9 dan gelen değeri i ye ata,ilk liste bitti
+#diğer liste için( x e ata i den gelen degeri  )
+print(liste10)
+
+out:[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]

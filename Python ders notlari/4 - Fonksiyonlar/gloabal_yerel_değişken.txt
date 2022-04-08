@@ -1,0 +1,16 @@
+Global ve yerel değişkenler;
+
+c=10#global değişken
+def fonk():
+    c=2#yerel değişken
+    print(c)
+
+fonk()
+print(c)
+
+
+out:2
+10
+
+local değişkenler sadece sınıflar ve fonksiyonlar
+içinde oluşturulan değişkenlerdir

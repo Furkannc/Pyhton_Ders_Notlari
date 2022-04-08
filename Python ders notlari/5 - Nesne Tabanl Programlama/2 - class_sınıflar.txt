@@ -1,0 +1,57 @@
+sınıflar : class ;
+
+obje oluştururken kurulan yapı:class tır
+
+orn;
+
+class araba():
+    model="Nissan"
+    renk="Siyah"
+    beygir=240
+    silindir=4
+     
+kullanım
+
+araba1=araba()#şeklinde yeni obje yaratılır
+#ama içindeki ozelliikler aynı olur
+orn;
+print(araba1)
+out;
+<__main__.araba object at 0x7f095447b6a0>
+#bize araba ogesinden uretilmiş bi obje oldugu bilgisini verir
+
+biz uretilen obje içindeki verileri gormek istersek;
+print(araba1.model)#şeklinde kullanabilirz
+out; nissan
+
+
+
+
+#####################################################################################################
+eger biz oluşan obje içindeki verileri değiştirmak istersek;
+
+class araba():#sınıf oluşturulur
+    def __init__(self,model,renk,beygir,silindir):#self ile sınıfın ozelliikleri ile obje tanımlanır
+        self.model=model
+        self.renk=renk
+        self.beygir=beygir
+        self.silindir=silindir
+#şeklinde sınıf tanımlanır
+#bu sınıftan obje turetmek için ;
+araba3=araba("mazada","siyah",150,4)  #diyerek obje sınfın ozelliikleri tanımlanır
+
+print(araba3.model)     out;mazada
+
+########################################################
+sınıflara varsayılan değer atamak için;
+class araba():#sınıf oluşturulur
+    def __init__(self,model="Bilgi yok",renk="Bilgi yok",beygir=70,silindir=2): #şeklinde varsayılan değer ataması yapılır
+        self.model=model
+        self.renk=renk
+        self.beygir=beygir
+        self.silindir=silindir
+
+###########################################################################
+sınıftan üretilen objenin sadece istenilen degerini değiştirmel için
+
+araba4=araba(beygir=240)#şeklinde diğer özellikler varsayılan şeklinde sadece belirtilen özellik farklı olcak şekilde obje yaratılır

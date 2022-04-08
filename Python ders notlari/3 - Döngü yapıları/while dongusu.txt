@@ -1,0 +1,44 @@
+while koşul: şeklinde kullanılır
+    işlem   
+    
+ornek
+
+i=0
+while i<10:
+    print("i'nin değeri",i)
+    i+=1  #i degerni artırmazsak dongu sonsuza girer
+out:
+i'nin degeri 0
++++++++++
+i'nin degeri 9 #da biter
+
+
+
+
+
+listeler ile kullanımı
+
+liste=[1,2,3,4,5]
+i=0
+while i<len(liste):
+    print(liste)
+    i+=1
+out:
+[1, 2, 3, 4, 5]
+[1, 2, 3, 4, 5]
+[1, 2, 3, 4, 5]
+[1, 2, 3, 4, 5]
+[1, 2, 3, 4, 5]
+    veya
+liste=[1,2,3,4,5]
+i=0
+while i<len(liste):
+    print("index:",i,"Liste: ",liste)
+    i+=1
+
+out:
+index: 0 Liste:  [1, 2, 3, 4, 5]
+index: 1 Liste:  [1, 2, 3, 4, 5]
+index: 2 Liste:  [1, 2, 3, 4, 5]
+index: 3 Liste:  [1, 2, 3, 4, 5]
+index: 4 Liste:  [1, 2, 3, 4, 5]

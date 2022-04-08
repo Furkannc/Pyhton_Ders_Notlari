@@ -1,0 +1,133 @@
+ileri seviye kümeler (sets)
+aynı elemandan 1 tanesini tutan değişken kümedir
+kümelerin sırası ve indexi yoktur
+küme oluşturmak;
+
+
+x={1,2,3} 
+#veya
+x=set()
+
+orn;
+liste={1,2,2,3,3,1,1,2}
+x=set(liste)
+print(x)
+out; {1,2,3}
+#aynı elemandan sadece 1 tanesini tutar
+orn;
+x=set("string")#string deger atansa dahi aynı karakterlerden
+    #sadece tek bir tanesini tutar
+###################################3
+kümeye eleman ekleme;
+x={1,2,3}
+x.append(4)
+#şeklinde ekleme yapılır
+
+#######################################
+iki kümenin farkını bulma difference()
+
+x={1,2,3,4,5,6,7}
+y={1,2,42,13,523,5,7}
+print(x.difference(y))
+
+out;    {3, 4, 6}   #x te olup y  de olmayanları veriıyor bize
+
+#################################################
+iki kümenin farkını bulup farkı çıkarma| difference_update()
+
+x={1,2,3,4,5,6,7}
+y={1,2,42,13,523,5,7}
+x.difference_update(y)
+# x kümesinin farklarını çıkarır
+ 
+ 
+#####################################################
+kümeden eleman çıkaram|  discard() 
+#eğer kümede çıkarılmasını istenen eleman yoksa
+#hata vermez boş döngü olur
+
+x={1,2,3,4,5,6,7}
+
+
+x.discard(2) #2 degeri artık kümeden çıkarılır
+
+#################################################33
+iki kümenin ortak elemanlarını kesişimlerini bulma
+| intersection()
+
+x={1,2,3,4,5,6,7}
+y={1,2,42,13,523,5,7}
+
+x.intersection(y)
+out;
+    {1,2,3,5,7}
+    
+    
+#####################################################
+kesişimlerini bulma ve atama
+|intersection_update()
+
+x={1,2,3,4,5,6,7}
+y={1,2,42,13,523,5,7}
+
+x.intersection_update(y)
+#y ile  olan ortak elemanları alır ve x e atar 
+print(x)
+out;        
+        {1,2,3,5,7}
+        
+#########################################################
+kümeler ayrık mı |  isdisjoint()
+
+x={1,2,3,4,5,6,7}
+y={1,2,42,13,523,5,7}
+z={11,34,645,243}
+x.isdisjoint(y)
+#eger herhangi bi eleman aynı ise 
+out;    
+    False #olur
+
+
+#eger hiçbir eleman aynı/eşit degile
+x.isdisjoint(z)
+out;
+       True #olur
+
+
+###################################################3
+#alt küme mi / aynı deger varmı 
+| issubset()
+
+x={1,2,3,4,5,6,7}
+y={1,2,3,4}
+z={11,34,645,243}
+
+x.issubset(y)
+out;    
+    True 
+#eger y küme si x kümesinin bir kısmını barındırıyorsa 
+#True deger doner bize
+
+
+############################################################
+iki kümenin kesişimini bulma | union()
+
+x={1,2,3,4,5,6,7}
+y={1,2,42,13,523,5,7}
+
+x.union(y)
+oıt;    
+        {1,2,5,7}
+        
+        
+##################################################
+kesişim degerini verme
+
+x={1,2,3,4,5,6,7}
+y={1,2,42,13,523,5,7}
+
+x.update(y)
+
+print(x) 
+    out;
+        {1,2,5,7}

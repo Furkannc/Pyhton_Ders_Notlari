@@ -1,0 +1,28 @@
+os modülü
+
+import os #şeklinde import edilir
+
+print(os.getcwd())#dosyanın bulundugu dizini gosterir
+
+os.chdir("İstenen dizin") #dizin değişir
+
+os.listdir() #bulunan dizindeki dosyaları gosterir
+
+os.mkdir("dosya ad") #dizine dosya oluşturur
+
+os.mkdris("dosya1/dosya2/dosya3") #iö iöe dosya oluşturur
+
+os.rmdir("dosya/dosya2") #belirtilen dosyayı siler
+
+os.remosvedirs("dosya1,dosya2") #iki dosyayı da aynı anda siler
+
+os.rename("eski ad","yeni ad") #dosya adını değişir
+
+print(os.stat("dosya ad")) #dosyanın özelliklerini verir
+
+print(os.stat("dosya ad").st_mtime)) #dosya değişiklik saatini verir
+
+print(os.wolk("dizin")) #butun dosya ve değerlirini verir 
+#for dongusune alınması gererkir alınmadıgı takdirde obje yaratır
+
+if endswith(".txt"):#sadece txt ile bitenler
